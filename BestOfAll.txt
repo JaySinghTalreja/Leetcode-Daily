@@ -1,5 +1,14 @@
-->Sentence Sequence
-->Strobogrammatic Number (Unsolved)
+**********=>Tough Question
+
+687. Longest Univalue Path (Graph, DFS || Recursion)
+
+
+
+
+**********=>General Problems
+
+-Sentence Sequence
+-Strobogrammatic Number (Unsolved)
 299. Bulls and Cows (String, Hashmap || Array)
 766. Toeplitz Matrix (Hashmap || Array)
 157. Read N Characters Given Read4 (Unsolved)
