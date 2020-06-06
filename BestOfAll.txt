@@ -15,6 +15,7 @@
 276. Paint Fence (Unsolved)
 293. Flip Game (Unsolved)
 447. No. of Boomberangs (Unsolved)
+266. Palindrome Permutation (Unsolved)
 
 
 
