@@ -6,7 +6,7 @@ public:
             n--;
             int M = n % 26;
             n /= 26;
-            r += (M + 'A');
+            r += (M + 'A'); 
         }
         reverse(r.begin(), r.end());
         return r;
