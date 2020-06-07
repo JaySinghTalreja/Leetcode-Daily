@@ -33,5 +33,9 @@
 
 
 
+
 **************=>Link 
 https://leetcode.com/discuss/interview-question/448024/Topic-wise-problems-for-Beginners
+***************=>BIT MANIPULATIOn
+https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/tutorial/#:~:text=There%20are%20different%20bitwise%20operations,used%20in%20optimizing%20time%20complexity.
+https://www.techiedelight.com/find-two-duplicate-elements-limited-range-array-using-xor/
