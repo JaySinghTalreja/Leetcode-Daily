@@ -23,6 +23,7 @@ public:
 
 
 //Alternaitve
+
 The trick is to notice that string t and string s differ by only 1 extra character, which means that if you combine both the strings, all characters have an even count, except for the unique one.
 
 This is great since XOR operator (^) has the property that a ^ a = 0. and a ^ 0 = a. This implies that all even count characters XOR ed together will cancel out.
