@@ -2,7 +2,7 @@
 687. Longest Univalue Path (Graph, DFS || Recursion)
 168. Excel Sheet Column Title (Math)
 475. Heaters (Math)
-
+52. Maximum Subarray(Dynamic Programmmig || Kadane's Algorithm)
 
 
 
@@ -15,8 +15,8 @@
 276. Paint Fence (Unsolved)
 293. Flip Game (Unsolved)
 447. No. of Boomberangs (Unsolved)
-266. Palindrome Permutation (Unsolved)
 558 - Quad Tree Intersection (Unsolved)
+788. Rotated Digits(Unsolved)
 
 
 
