@@ -3,6 +3,7 @@
 168. Excel Sheet Column Title (Math)
 475. Heaters (Math)
 52. Maximum Subarray(Dynamic Programmmig || Kadane's Algorithm)
+459. Repeated Substring Pattern
 
 
 
