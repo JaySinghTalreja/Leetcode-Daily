@@ -33,6 +33,7 @@
 226. Invert Binary Tree(Tree)
 389. Find the Difference(Bit Manipulation || Hashtable)
 283. Move Zeroes(Array || Swap)
+69. Sqrt(Binary Search || Bit Manipulation)
 
 
 
