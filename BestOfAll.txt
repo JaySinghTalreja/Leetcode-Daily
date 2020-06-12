@@ -3,14 +3,14 @@
 687. Longest Univalue Path (Graph, DFS || Recursion)
 168. Excel Sheet Column Title (Math)
 475. Heaters (Math)
-52. Maximum Subarray(Dynamic Programmmig || Kadane's Algorithm)
+52.  Maximum Subarray(Dynamic Programmmig || Kadane's Algorithm)
 459. Repeated Substring Pattern
 121. Best Time to Buy and Sell Stocks.cpp(DP||ARRAY||KADANE's Algorithm)
 
 
 
 
-**********=>General Problems
+**********=>UnSolved Problems
 -Sentence Sequence
 -Strobogrammatic Number (Unsolved)
 359. Logger Rate Limiter (Unsolved)
@@ -18,24 +18,23 @@
 276. Paint Fence (Unsolved)
 293. Flip Game (Unsolved)
 447. No. of Boomberangs (Unsolved)
-558 - Quad Tree Intersection (Unsolved)
+558. Quad Tree Intersection (Unsolved)
 788. Rotated Digits(Unsolved)
+422. Valid Word Square(Unsolved)
 
 
 
 
-
-
-
+**************GENERAL PROBLEMS
 299. Bulls and Cows (String, Hashmap || Array)
 766. Toeplitz Matrix (Hashmap || Array)
 100. Same Tree(Tree || DFS || Recursion);
-38. Count and Say (String)
+38.  Count and Say (String)
 463. Island Perimeter (Matrix || FloodFill) 
 226. Invert Binary Tree(Tree)
 389. Find the Difference(Bit Manipulation || Hashtable)
 283. Move Zeroes(Array || Swap)
-69. Sqrt(Binary Search || Bit Manipulation)
+69.  Sqrt(Binary Search || Bit Manipulation)
 
 
 
