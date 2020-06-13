@@ -37,6 +37,7 @@
 283. Move Zeroes(Array || Swap)
 69.  Sqrt(Binary Search || Bit Manipulation)
 206. Reverse Linked List(Recursive || Iterative with Stack)
+242. valid Anagram(String)
 
 
 
