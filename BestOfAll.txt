@@ -10,6 +10,7 @@
 
 
 
+
 **********=>UnSolved Problems
 -Sentence Sequence
 -Strobogrammatic Number (Unsolved)
@@ -38,6 +39,7 @@
 69.  Sqrt(Binary Search || Bit Manipulation)
 206. Reverse Linked List(Recursive || Iterative with Stack)
 242. valid Anagram(String)
+169. Majority Element(HASHMAP || BITMASK || DIVIDE AND CONQUER || MOORE'S VOTING ALGORTIHM)
 
 
 
