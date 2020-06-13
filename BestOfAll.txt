@@ -6,7 +6,7 @@
 52.  Maximum Subarray(Dynamic Programmmig || Kadane's Algorithm)
 459. Repeated Substring Pattern
 121. Best Time to Buy and Sell Stocks.cpp(DP||ARRAY||KADANE's Algorithm)
-
+1170. Compare Strings by the frequence of smallest number (String, Array, Map)
 
 
 
@@ -21,6 +21,7 @@
 558. Quad Tree Intersection (Unsolved)
 788. Rotated Digits(Unsolved)
 422. Valid Word Square(Unsolved)
+751. IP to CIDR (Unsolved)
 
 
 
