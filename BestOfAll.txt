@@ -41,6 +41,7 @@
 242. valid Anagram(String)
 169. Majority Element(HASHMAP || BITMASK || DIVIDE AND CONQUER || MOORE'S VOTING ALGORTIHM)
 543. Diameter of Binary Tree(Graph || DFS)
+231. Power of Two(Math || Bit Manipulation)
 
 
 
