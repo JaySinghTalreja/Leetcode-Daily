@@ -7,7 +7,7 @@
 459. Repeated Substring Pattern
 121. Best Time to Buy and Sell Stocks.cpp(DP||ARRAY||KADANE's Algorithm)
 1170. Compare Strings by the frequence of smallest number (String, Array, Map)
-108. Convert Sorted Array to Binary Search Tree
+108. Convert Sorted Array to Binary Search Tree (Binary Search Kinda)
 
 
 
@@ -44,6 +44,7 @@
 543. Diameter of Binary Tree(Graph || DFS)
 231. Power of Two(Math || Bit Manipulation)
 551. Student Attendance Record I
+415. Add Strings(String)
 
 
 
