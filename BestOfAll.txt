@@ -10,7 +10,7 @@
 108. Convert Sorted Array to Binary Search Tree (Binary Search Kinda)
 21. Merge Two Sorted Lists(Linked List)
 235. Lowest Common Ancestor of a Binary Search Tree(Tree)
-
+110. Balanced Binary Tree(Tree)
 
 
 **********=>UnSolved Problems
