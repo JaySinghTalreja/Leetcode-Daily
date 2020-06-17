@@ -50,6 +50,7 @@
 415. Add Strings(String)
 941. Valid Mountain Array(Array)
 268. Missing Number(Array || Bit Manipulation || Binary Search)
+191. Number of 1 Bits (Bit Manipulation)
 
 
 
