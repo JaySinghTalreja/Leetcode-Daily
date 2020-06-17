@@ -12,6 +12,7 @@
 235. Lowest Common Ancestor of a Binary Search Tree(Tree)
 110. Balanced Binary Tree(Tree)
 724. Find Pivot Index(Array)
+190. Reverse Bits (Bit Manipulation)
 
 
 
@@ -29,8 +30,6 @@
 751. IP to CIDR (Unsolved)
 270. Closest Binary Search Tree Value (Unsolved)
 760. Find Anagram Mappings(Unsolved)
-
-
 
 
 
