@@ -52,6 +52,7 @@
 268. Missing Number(Array || Bit Manipulation || Binary Search)
 191. Number of 1 Bits (Bit Manipulation)
 167. Two Sum II - Input array is sorted(Binary Search || Two Pointer || Array)
+7.   Reverse Integer (Math)
 
 
 
