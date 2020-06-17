@@ -26,6 +26,7 @@
 422. Valid Word Square(Unsolved)
 751. IP to CIDR (Unsolved)
 270. Closest Binary Search Tree Value (Unsolved)
+760. Find Anagram Mappings(Unsolved)
 
 
 
