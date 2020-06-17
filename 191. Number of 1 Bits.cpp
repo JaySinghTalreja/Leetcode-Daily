@@ -24,3 +24,7 @@ int hammingWeight(uint32_t n)
     }
     return res;
 }
+
+
+
+https://leetcode.com/problems/number-of-1-bits/discuss/55120/Short-code-of-C%2B%2B-O(m)-by-time-m-is-the-count-of-1's-and-another-several-method-of-O(1)-time
