@@ -16,6 +16,8 @@
 70. Climbing Stairs (Dynamic Programmmig)
 104. Maximum Depth of Binary Tree(BFS || TREE)
 13. Roman to Integer(Math)
+14. Longest Common Prefix(String)
+
 
 
 **********=>UnSolved Problems
@@ -61,7 +63,8 @@
 412. Fizz Buzz(Math)
 
 
-
+****************NEW UNSOLVED*********
+1485.Clone Binary Tree with Random Pointer
 
 
 **************=>Link 
