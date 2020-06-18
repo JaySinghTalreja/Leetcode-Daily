@@ -41,3 +41,7 @@ public:
     }
 };
 //Time O(n*m)
+
+
+
+https://leetcode.com/problems/longest-common-prefix/discuss/6910/Java-code-with-13-lines

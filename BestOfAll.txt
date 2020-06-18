@@ -61,6 +61,7 @@
 167. Two Sum II - Input array is sorted(Binary Search || Two Pointer || Array)
 7.   Reverse Integer (Math)
 412. Fizz Buzz(Math)
+344. Reverse String(String)
 
 
 ****************NEW UNSOLVED*********
