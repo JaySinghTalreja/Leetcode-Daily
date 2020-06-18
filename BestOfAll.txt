@@ -62,6 +62,7 @@
 7.   Reverse Integer (Math)
 412. Fizz Buzz(Math)
 344. Reverse String(String)
+118. Pascal's Triangle (Math)
 
 
 ****************NEW UNSOLVED*********
