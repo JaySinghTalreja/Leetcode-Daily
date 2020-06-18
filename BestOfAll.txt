@@ -31,6 +31,7 @@
 751. IP to CIDR (Unsolved)
 270. Closest Binary Search Tree Value (Unsolved)
 760. Find Anagram Mappings(Unsolved)
+408. Valid Word Abbreviation(Unsolved)
 
 
 
@@ -56,6 +57,7 @@
 191. Number of 1 Bits (Bit Manipulation)
 167. Two Sum II - Input array is sorted(Binary Search || Two Pointer || Array)
 7.   Reverse Integer (Math)
+412. Fizz Buzz(Math)
 
 
 
