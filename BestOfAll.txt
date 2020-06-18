@@ -14,6 +14,7 @@
 724. Find Pivot Index(Array)
 190. Reverse Bits (Bit Manipulation)
 70. Climbing Stairs (Dynamic Programmmig)
+104. Maximum Depth of Binary Tree(BFS || TREE)
 
 
 
@@ -58,6 +59,7 @@
 167. Two Sum II - Input array is sorted(Binary Search || Two Pointer || Array)
 7.   Reverse Integer (Math)
 412. Fizz Buzz(Math)
+
 
 
 
