@@ -63,6 +63,7 @@
 412. Fizz Buzz(Math)
 344. Reverse String(String)
 118. Pascal's Triangle (Math)
+119. Pascal's Triangle II(Math)
 
 
 ****************NEW UNSOLVED*********
