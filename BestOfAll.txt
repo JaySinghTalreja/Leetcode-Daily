@@ -64,6 +64,7 @@
 344. Reverse String(String)
 118. Pascal's Triangle (Math)
 119. Pascal's Triangle II(Math)
+374. Guess Number Higher or Lower(Binary Search)
 
 
 ****************NEW UNSOLVED*********
