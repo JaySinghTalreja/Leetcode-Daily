@@ -12,7 +12,7 @@
 class Solution {
 public:
     TreeNode* helper(vector<int> &nums, int left, int right) {
-        if(left > right){
+        if(left > right){       // left == right would still execute the code below
             return NULL;
         }
         int mid = left + (right - left)/2;
@@ -27,6 +27,6 @@ public:
 };
 
 
-//Complexity Ananlysis O(LogN) or O(N)
+//Complexity Ananlysis O(N) and Space O(N) or O(Log N)
 //Space O(N) Due to Recusion Stack
 https://medium.com/@harycane/convert-sorted-array-to-bst-35781e940ca5

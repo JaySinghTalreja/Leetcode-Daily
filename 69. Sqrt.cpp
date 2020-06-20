@@ -70,6 +70,7 @@ public int sqrt(int x) {
     h--;
     int b=h-1;
     int res=(1<<h);
+    //Check adding each bit after the MSB and see if the sqaure is less than or equal to x;
     while(b>=0){  // find the remaining bits
         if((long)(res | (1<<b))*(long)(res |(1<<b))<=x)
             res|=(1<<b);
