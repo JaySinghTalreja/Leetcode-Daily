@@ -51,7 +51,7 @@ private int rob(int[] nums, int i) {
     memo[i] = result;
     return result;
 }
-Much better, this should run in O(n) time. Space complexity is O(n) as well, because of the recursion stack, let's try to get rid of it.
+Much better, this should run in O(n) time. Space complexity is O(n) as well, because of the recursion stack, lets try to get rid of it.
 
 Step 4. Iterative + memo (bottom-up)
 

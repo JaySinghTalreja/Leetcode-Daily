@@ -7,7 +7,7 @@ Example:    h = house,  * = heater  M = INT_MAX
         1   2   3   4   5   6   7   8   9    index
         *           *       *                heaters
                 
-        0   2   1   0   1   0   -   -   -    (distance to nearest RHS heater)
+        0   2   1   0   1   0   M   M   M    (distance to nearest RHS heater) (M = INT_MAX)
         0   1   2   0   1   0   1   2   3    (distance to nearest LHS heater)
 
         0   1   1   0   1   0   1   2   3    (res = minimum of above two)
