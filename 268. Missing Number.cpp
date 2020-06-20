@@ -20,7 +20,7 @@ public:
 
 //1.XOR
 public int missingNumber(int[] nums) { //xor
-    int res = nums.length;
+    int res = nums.length; //IMP  Initial Xor with the maximum element;
     for(int i=0; i<nums.length; i++){
         res ^= i;
         res ^= nums[i];
@@ -31,7 +31,7 @@ public int missingNumber(int[] nums) { //xor
 //2.SUM
 public int missingNumber(int[] nums) { //sum
     int len = nums.length;
-    int sum = (0+len)*(len+1)/2;
+    int sum = (0+len)*(len+1)/2;   //n(n-1)/2 where n = len+1 and n-1 = len
     for(int i=0; i<len; i++)
         sum-=nums[i];
     return sum;
