@@ -9,7 +9,8 @@ public:
         }
         auto it = find(check.begin(), check.end(), 0);
         if(it != check.end()) {
-            return distance(check.begin(), it);
+            //return distance(check.begin(), it);
+            return it - check.begin();
         }
         return 0;
     }
