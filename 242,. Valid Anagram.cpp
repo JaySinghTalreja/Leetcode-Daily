@@ -64,3 +64,30 @@ public:
         return s == t; 
     }
 };
+
+
+
+//Thought of a new approach , try Doing it with bit manipulation 
+//(But It didnt't work)
+Input  
+"aa"
+"bb"
+//Since xoring cancel out a a from first input and b b from second input it gives true
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        if(s.length()!=t.length()) {
+            return false;
+        }
+        int m =0;
+        for(int i=0;i<s.length();i++) {
+            m ^= t[i]-'a';
+            m ^= s[i]-'a';
+        }
+        if(m > 0) {
+            return false;
+        }
+        return true;
+    }
+};
+

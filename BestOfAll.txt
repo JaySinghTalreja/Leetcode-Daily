@@ -65,6 +65,7 @@
 118. Pascal's Triangle (Math)
 119. Pascal's Triangle II(Math)
 374. Guess Number Higher or Lower(Binary Search)
+686. Repeated String Match(String)
 
 
 ****************NEW UNSOLVED*********

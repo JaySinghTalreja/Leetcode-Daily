@@ -16,8 +16,6 @@ public:
     }
 };
 
-
-
 //1.XOR
 public int missingNumber(int[] nums) { //xor
     int res = nums.length; //IMP  Initial Xor with the maximum element;
