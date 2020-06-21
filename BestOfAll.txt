@@ -17,7 +17,8 @@
 104. Maximum Depth of Binary Tree(BFS || TREE)
 13. Roman to Integer(Math)
 14. Longest Common Prefix(String)
-
+38.  Count and Say (String)
+463. Island Perimeter (Matrix || FloodFill) 
 
 
 **********=>UnSolved Problems
@@ -42,8 +43,6 @@
 299. Bulls and Cows (String, Hashmap || Array)
 766. Toeplitz Matrix (Hashmap || Array)
 100. Same Tree(Tree || DFS || Recursion);
-38.  Count and Say (String)
-463. Island Perimeter (Matrix || FloodFill) 
 226. Invert Binary Tree(Tree)
 389. Find the Difference(Bit Manipulation || Hashtable)
 283. Move Zeroes(Array || Swap)
