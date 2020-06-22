@@ -5,7 +5,7 @@ public:
         unordered_map<int, int> dv;
         for(int i=0;i<matrix.size();i++) {
             for(int j=0;j<matrix[i].size();j++) {
-                //Solution One
+                //Solution One Much Better
                 /*if(i > 0 && j > 0 && matrix[i][j] != matrix[i-1][j-1]) {
                     return false;
                 }
@@ -23,3 +23,8 @@ public:
         return true; 
     }
 };
+
+
+
+
+// Remeber i-j is same for evert diagonal
