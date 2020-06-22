@@ -66,6 +66,7 @@
 119. Pascal's Triangle II(Math)
 374. Guess Number Higher or Lower(Binary Search)
 686. Repeated String Match(String)
+101. Symmetric Tree(Graph || DFS)
 
 
 ****************NEW UNSOLVED*********
