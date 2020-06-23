@@ -72,11 +72,19 @@
 349. Intersection of Two Arrays (Array || Sorting || Binary Search || Two Pointers)
 836. Rectangle Overlap(Math)
 771. Jewels and Stones(String)
+232. Implement Queue using Stacks(Stacks)
+
+
 
 
 ****************NEW UNSOLVED*********
 1485.Clone Binary Tree with Random Pointer
 195. Tenth Line (Not a CPP Problem)
+
+
+
+*******************Dynamic Programming***********************
+https://github.com/skm2000/Dynamic-Programming
 
 
 **************=>Link 
