@@ -20,6 +20,7 @@
 38.  Count and Say (String)
 463. Island Perimeter (Matrix || FloodFill)
 160. Intersection of Two Linked Lists(Linked List)
+806. Number of Lines To Write String(String)
 
 
 **********=>UnSolved Problems
