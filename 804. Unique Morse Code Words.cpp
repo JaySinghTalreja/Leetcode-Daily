@@ -13,3 +13,7 @@ public:
         return codes.size();
     }
 };
+
+
+//Time Complexity -> O(nm)
+//or O(N) if size of word vector(n) is greater than m.

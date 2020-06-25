@@ -1,6 +1,7 @@
 **********=>Tough Question
 122. Best Time to Buy and Sell Stock II(Greedy)
 748. Shortest Completing Word(String)
+202. Happy Number(Math || Floyd Cycle Detection || Hashset || HashMap)
 108. Convert Sorted Array to Binary Search Tree (Binary Search Kinda)
 121. Best Time to Buy and Sell Stocks.cpp(DP||ARRAY||KADANE's Algorithm)
 1170. Compare Strings by the frequence of smallest number (String, Array, Map)
