@@ -32,6 +32,8 @@ We can use two pointers to read the positive and negative parts of the array - o
 
 Now that we are reading two increasing arrays (the squares of the elements), we can merge these arrays together using a two-pointer technique.
 
+
+
 class Solution {
     public int[] sortedSquares(int[] A) {
         int N = A.length;
@@ -65,6 +67,63 @@ class Solution {
         return ans;
     }
 }
+
+
+//Double Ended Queue
+/* Idea ---- 
+1) Store the array in a double ended queue  
+2) Now the element with the largest magnitude would be at the front or at the back
+3) Moreover, the element with the largest magnitude would have the largest square value
+4) So, Pop it and similarly get the second largest in magnitude
+5) Finally, Reverse the answer to sort in non_decreasing order
+*/
+
+class Solution
+{
+public:
+    vector<int> sortedSquares(vector<int>& myVector);
+};
+
+/* Returns the vector of sorted square */
+vector<int> Solution :: sortedSquares(vector<int>& myVector)
+{
+    // Declare the deque and the container to hold the answer
+    vector<int> answer;
+    deque<int> dq;
+    
+    // Fill all elements in the deque
+    for(auto ele: myVector)
+        dq.push_back(ele);
+    
+    // Keep extracting the element with the highest magnitude
+    while(!dq.empty())
+    {
+        // Get a copy
+        int front = dq.front();
+        int back = dq.back();
+        
+        // If the largest magnitude occurs at the front, pop it and append it
+        if(abs(front) > abs(back))
+        {
+            dq.pop_front();
+            answer.push_back(front*front);
+        }
+        
+        // Else pop the back and append it to answer
+        else
+        {
+            dq.pop_back();
+            answer.push_back(back*back);
+        }
+    }
+    
+    // Fianlly Reverse the answer to sort in non decreasing order
+    reverse(answer.begin(), answer.end());
+    
+    // Return the new answer
+    return answer;
+}
+
 
 //Alternative
 https://leetcode.com/problems/squares-of-a-sorted-array/discuss/495394/C%2B%2B%3A-Simplest-one-pass-two-pointers
