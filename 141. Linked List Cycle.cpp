@@ -26,7 +26,35 @@ public:
     }
 };
 
+//Alternative
+bool hasCycle(ListNode *head) 
+{
+    ListNode *fast;
+    fast = head;
+    while (head)
+    {
+        head = head->next;
+        if (fast->next && fast->next->next)
+            fast = fast->next->next;
+        else
+            return false;
+            
+        if (fast == head)
+            return true;
+    }
+    
+    return false;
+}
 
+bool hasCycle(struct ListNode *head) {
+    struct ListNode *fast=head, *slow=head;
+    while( slow && fast && fast->next ){
+        fast=fast->next->next;
+        slow=slow->next;
+        if(fast==slow) return true;
+    }
+    return false;
+}
 
 Complexity analysis
 
