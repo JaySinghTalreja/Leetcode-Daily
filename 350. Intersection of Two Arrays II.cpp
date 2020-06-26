@@ -1,3 +1,6 @@
+//BEST BINARY SEARCH Solution
+//https://leetcode.com/problems/intersection-of-two-arrays-ii/discuss/439955/JAVA-SOLUTION-%2B-4-FOLLOW-UPS
+
 class Solution {
 public:
     vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
@@ -108,4 +111,48 @@ Thats why we should use this method instead of hashmap method when array is alre
 
 
 https://leetcode.com/problems/intersection-of-two-arrays-ii/discuss/82263/C%2B%2B-hash-table-solution-and-sort-%2B-two-pointers-solution-with-time-and-space-complexity
+
+Solution 2: sort + binary search
+
+time complexity: max(O(mlgm), O(nlgn), O(mlgn)) or max(O(mlgm),
+O(nlgn), O(nlgm))
+O(mlgm) <-- sort first array
+O(nlgn) <--- sort second array
+O(mlgn) <--- for each element in nums1, do binary search in nums2
+O(nlgm) <--- for each element in nums2, do binary search in nums1
+space complexity: depends on the space complexity used in your
+sorting algorithm, bounded by max(O(m), O(n))
+vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
+    vector<int> ret;
+    if(nums1.empty() || nums2.empty()) return ret;
+    sort(nums1.begin(), nums1.end());
+    sort(nums2.begin(), nums2.end());
+    int j=0;
+    for(int i=0; i<nums1.size(); ) {
+        int index = lower_bound(nums2, nums1[i]);
+        int count2 = 0;
+        while(index<nums2.size() && nums2[index]==nums1[i]) {
+            count2++; 
+            index++;
+        }
+        int count1 = 0;
+        while(nums1[j]==nums1[i]) {
+            count1++;
+            j++;
+        }
+        ret.insert(ret.end(),min(count1,count2),nums1[i]);
+        i=j;
+    } 
+    return ret;
+}
+//********************************************************IMPLEMENTED LOWER BOUND USING BINARY SEARCH *************************8
+int lower_bound(const vector<int>& nums, int target) {
+    int l=0, r=nums.size()-1;
+    while(l<r) {
+        int m=l+(r-l)/2;
+        if(nums[m]<target) {l=m+1;}
+        else {r=m;}
+    }
+    return r;
+}
 
