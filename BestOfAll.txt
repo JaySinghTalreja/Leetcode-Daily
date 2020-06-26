@@ -83,6 +83,7 @@
 136. Single Number(XOR) (NO IMP)
 141. Linked List Cycle(Linked Lis)
 409. Longest Palindrome(String || Palindrom)
+278. First Bad Version(Binary Search)
 
 
 
