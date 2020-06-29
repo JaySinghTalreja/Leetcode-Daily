@@ -101,6 +101,9 @@
 https://github.com/skm2000/Dynamic-Programming
 
 
+**************************SQL
+175. Combine Two Tables
+
 **************=>Link 
 https://leetcode.com/discuss/interview-question/448024/Topic-wise-problems-for-Beginners
 ***************=>BIT MANIPULATIOn
