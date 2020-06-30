@@ -5,6 +5,7 @@
 using namespace std;
 #define mod (int) 998244353
 #define MOD (int) 1e9+7
+#define ll long long
 #define all(a) a.begin(),a.end()
 #define f0(i, n) for (int i = 0; i < n; i++)
 #define f1(i, n) for (int i = 1; i <= n; i++)
@@ -24,8 +25,27 @@ using namespace std;
 #define sortall(x) sort(all(x))
 #define trav(it, a) for(auto it = a.begin(); it != a.end(); it++)
 
+string convertToBase7(int n) {
+    deb(n);deb(n%7);
+    string ans ="";
+    int flag = false;
+    if(n < 0) {
+            n = abs(n);
+            flag = true;
+    }
+    while(n>0) {
+        ans += to_string(n%7);
+        n /= 7;
+    }
+    if(flag) ans+="-";
+    reverse(all(ans));
+    return ans;
+}
+
 int main()
 {
-
+    int v = -4509;
+    string c = convertToBase7(v);
+    deb(c);
     return 0;
 }
