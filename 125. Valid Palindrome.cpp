@@ -7,7 +7,7 @@ public:
         //bool flag = false;
         //cout<<"right:"<<right<<endl;
         while(left <= right) {
-            if(!isalnum(s[left])){
+            if(!isalnum(s[left])){                  //Useful Function
                 left++;
                 continue;
             }
