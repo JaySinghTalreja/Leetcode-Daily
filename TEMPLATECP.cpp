@@ -25,27 +25,15 @@ using namespace std;
 #define sortall(x) sort(all(x))
 #define trav(it, a) for(auto it = a.begin(); it != a.end(); it++)
 
-string convertToBase7(int n) {
-    deb(n);deb(n%7);
-    string ans ="";
-    int flag = false;
-    if(n < 0) {
-            n = abs(n);
-            flag = true;
-    }
-    while(n>0) {
-        ans += to_string(n%7);
-        n /= 7;
-    }
-    if(flag) ans+="-";
-    reverse(all(ans));
-    return ans;
-}
 
 int main()
 {
-    int v = -4509;
-    string c = convertToBase7(v);
-    deb(c);
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    #endif
+    tc(t) {
+        cout<<"M";
+    }
     return 0;
 }

@@ -19,7 +19,8 @@ public:
             return s1.second < s2.second;
         });
         cout<<minElement.first<<" ";
-         //Finding Common Divisor | Good Approach
+         //Finding Common Divisor | Good Approach | Time Complexity of Brute Force GCD is O(N) 
+         //The following code runs in O(NM) Where M = Number of element in Map
         for(int i=2;i<=minElement.second;i++) {
             int count = 0;
             for(auto A: c) {

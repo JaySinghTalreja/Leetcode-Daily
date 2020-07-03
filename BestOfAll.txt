@@ -53,10 +53,12 @@
 252. Meeting Rooms (Unsolved)
 243. Shortest Word Distance(UnSolved)
 1165. Single Row Keyboard(UnSolved)
+1056. Confusing Numbers(UnSolved)
 
 
 
 **************GENERAL PROBLEMS
+9. Palindrome Number(Math)
 299. Bulls and Cows (String, Hashmap || Array)
 766. Toeplitz Matrix (Hashmap || Array)
 100. Same Tree(Tree || DFS || Recursion);
