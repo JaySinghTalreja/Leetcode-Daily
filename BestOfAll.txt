@@ -112,6 +112,7 @@
 
 *******************Dynamic Programming***********************
 https://github.com/skm2000/Dynamic-Programming
+https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns (Patterns for Dynamic Programming)
 
 
 **************************SQL
