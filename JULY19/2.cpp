@@ -24,27 +24,33 @@ using namespace std;
 
 void solve() {
     //Change the Return type if necessary
-    unsigned long int N;
+    int N;
     cin>>N;
-    vector<long int> S(N, 0);
-    unsigned long int X=0;
-    f0(i,N){
-        cin>>X;
-        S[i] = X;
-    }
-    if(N == 1){
-        cout<<0<<endl;
-        return;
-    }
-    int sum = 0;
-    for(unsigned long int i=1;i<S.size();i++) {
-        if(S[i] == S[i-1]) {
-            continue;
+    unsigned long int A, B;
+    int winA=0, winB=0;
+    f0(i,N) {
+        cin>>A;
+        cin>>B;
+        if(A > B){
+            sumA++;
         }
-        int diff = abs(S[i] - S[i-1]);
-        sum += (diff == 1) ? 0 : diff-1;
+        else if(A<B){
+            sumB++;
+        }
+        else{
+            sumA++;sumB++;
+        }
     }
-    cout<<sum<<endl;
+    if(sumA == sumB){
+        cout<<"2 "<<sumA;
+    }
+    else if(sumA > sumB){
+        cout<<"0 "<<sumA;
+    }
+    else{
+        cout<<"1 "<<sumB;
+    }
+    cout<<endl;
 }
 
 int main()

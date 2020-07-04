@@ -23,28 +23,7 @@ using namespace std;
 #define trav(it, a) for(auto it = a.begin(); it != a.end(); it++)
 
 void solve() {
-    //Change the Return type if necessary
-    unsigned long int N;
-    cin>>N;
-    vector<long int> S(N, 0);
-    unsigned long int X=0;
-    f0(i,N){
-        cin>>X;
-        S[i] = X;
-    }
-    if(N == 1){
-        cout<<0<<endl;
-        return;
-    }
-    int sum = 0;
-    for(unsigned long int i=1;i<S.size();i++) {
-        if(S[i] == S[i-1]) {
-            continue;
-        }
-        int diff = abs(S[i] - S[i-1]);
-        sum += (diff == 1) ? 0 : diff-1;
-    }
-    cout<<sum<<endl;
+   //Change the return type if necessary
 }
 
 int main()
