@@ -21,9 +21,30 @@ using namespace std;
 #define deb2(x, y) cout << #x << "=" << x << "," << #y << "=" << y << endl
 #define sortall(x) sort(all(x))
 #define trav(it, a) for(auto it = a.begin(); it != a.end(); it++)
-
 void solve() {
    //Change the return type if necessary
+   unsigned int N, X;
+   cin>>N>>x;
+   vector<unsigned int> AV(N, 0);
+    f0(i,N) {
+        cin>>AV[i];
+    }
+    sort(all(AV));
+    int dc;
+    while(N>0) {
+        for(int i=AV.size()-1;i>=0;i--) {
+            if(AV[i] == x) {
+                AV[i] = 0;
+                x *= 2;
+            }
+            else{
+                int minIndex = AV[i] / x;
+                while(i > 0 ) {
+
+                }
+            }
+        }
+    }
 }
 
 int main()
@@ -33,9 +54,7 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif
-
     fast;
-
     tc(t) {
         solve();
     }
