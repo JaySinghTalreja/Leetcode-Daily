@@ -16,6 +16,7 @@
         "vector": "cpp",
         "*.tcc": "cpp",
         "iostream": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "variant": "cpp"
     }
 }
