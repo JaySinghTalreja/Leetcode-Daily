@@ -86,36 +86,10 @@ void solve() {
     while(N) {
         //cout<<"index:"<<index<<" "<<"X:"<<X<<endl;
         //sleep(1);
-        index = index >= int(AV.size()) ? AV.size()-1 : index;
-        cout<<"index:"<<index<<" "<<"X:"<<X<<endl;
-        sleep(1);
-        if(AV[index] - X <= 0) {
-           AV[index] = 0;
-           X *= 2;
-           dc++;
-           AV.erase(AV.begin()+index), N--;
-           index = getIndex(AV, X);
-        }
-        else {
-            if(index == 0 && X < AV[index] / 2) {
-                X*=2;
-                dc++;
-            }
-            else{
-                //index = doCalc(AV, X, index);
-                //cout<<"TRAV:";
-                //trav(it, AV);
-                //cout<<endl;
-                int temp = AV[index] - X;
-                AV[index] = (temp <= 0) ? 0 : (temp)*2;
-                X = (X<=temp+X) ? X*2 : (temp+X) * 2;
-                cout<<"TRAV:";
-                trav(it, AV);
-                cout<<endl;
-                dc++;
-                if(AV[index] == 0) AV.erase(AV.begin()+index), N--;
-                index = getIndex(AV, X);
-            }
+        if(X >= AV[index]/2) {
+            int temp = AV[index] - X;
+            AV[index] = (temp <= 0) ? 0 : temp*2;
+            X = (temp <=0) ? () : (temp+X)
         }
     }
     cout<<dc<<endl; 
