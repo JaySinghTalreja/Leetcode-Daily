@@ -1,6 +1,7 @@
 **********=>Tough Question
 914. X of a Kind in a Deck of Cards (MATH | GCD) TOUGH BRUTE FORCE
 189. Rotate Array(Array)
+572. Subtree of Another Tree (Binary Tree)
 720. Longest Word in Dictionary (String || Trie || HashSet)
 859. Buddy Strings(String)
 443. String Compression(String || Array) (Medium Level)

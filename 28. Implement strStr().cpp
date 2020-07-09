@@ -40,7 +40,7 @@ private:
             if (needle[i] == needle[len]) {
                 lps[i++] = ++len;
             } else if (len) {
-                len = lps[len - 1];
+                len = lps[len - 1]; // Only for first element
             } else {
                 lps[i++] = 0;
             }
