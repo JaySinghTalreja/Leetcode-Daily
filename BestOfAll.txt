@@ -2,6 +2,7 @@
 914. X of a Kind in a Deck of Cards (MATH | GCD) TOUGH BRUTE FORCE
 189. Rotate Array(Array)
 572. Subtree of Another Tree (Binary Tree)
+1007. Minimum Domino Rotations For Equal Row(Array)
 720. Longest Word in Dictionary (String || Trie || HashSet)
 859. Buddy Strings(String)
 443. String Compression(String || Array) (Medium Level)
@@ -12,7 +13,7 @@
 26. Remove Duplicates from Sorted Array(Two Pointers)
 219. Contains Duplicate II(Array)
 977. Squares of a Sorted Array(Array)
-108. Convert Sorted Array to Binary Search Tree (Binary Search Kinda)
+108. Convert Sorted Array to Binary Search Tree (Binary& Search Kinda)
 121. Best Time to Buy and Sell Stocks.cpp(DP||ARRAY||KADANE's Algorithm)
 1170. Compare Strings by the frequence of smallest number (String, Array, Map)
 198. House Robber(DP | Recursion)
