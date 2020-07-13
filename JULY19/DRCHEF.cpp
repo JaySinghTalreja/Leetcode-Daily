@@ -3,7 +3,7 @@
 using namespace std;
 #define mod (int) 998244353
 #define MOD (int) 1e9+7
-#define ll long long
+//#define ll long long
 #define all(a) a.begin(),a.end()
 #define f0(i, n) for (unsigned int i = 0; i < n; i++)
 #define f1(i, n) for (unsigned int i = 1; i <= n; i++)
@@ -23,88 +23,33 @@ using namespace std;
 #define sortall(x) sort(all(x))
 #define trav(it, a) for(auto it = a.begin(); it != a.end(); it++) cout<<*it<<" ";
 
-int getIndex(vector<unsigned int> &AV, unsigned int element) {
-    return lower_bound(AV.begin(), AV.end(), element)-AV.begin();
-}
-
-int doCalc(vector<unsigned int> &AV, unsigned int X, int index) {
-    int right = (AV[index] > X) ? (X*2) : (AV[index]*2);
-    int left = (AV[index+1] > X) ? (X*2) : (AV[index+1]*2);
-    return (right >= left ? index : (index + 1));
-}
 void solve() {
    //Change the return type if necessary
-    unsigned int N, X;
-    cin>>N>>X;
-    vector<unsigned int> AV(N, 0);
-    //cout<<"LOOPING"<<endl;
-    f0(i,N) {
-        cin>>AV[i];
+    cin >> n >> x;
+    multiset<int> population;
+    for(int i=0;i<n;i++){
+        int p;
+        cin >> p;
+        population.insert(p);
+        MAX_p = max(MAX_p,p);
     }
-    sort(all(AV));
-    int dc=0;
-    //cout<<"LOOPING"<<endl;
-    int index = getIndex(AV, X);
-    while(N) {
-        index = index >= int(AV.size()) ? AV.size()-1 : index;
-        //cout<<"index:"<<index<<" "<<"X:"<<X<<endl;
-        //sleep(1);
-        if(X == AV[index]) {
-            AV[index] = 0,dc++,X *= 2,N--;
-            AV.erase(AV.begin()+index);
-            index = getIndex(AV, X);
-        }
-        else if(index == 0 && X < AV[index]) {
-            X *= 2;
-            dc++;
-            //trav(it, AV);
-        }
-        else{
-            int temp = AV[index] - X;
-            AV[index] = (temp <= 0) ? 0 : (temp)*2;
-            X = (X<=temp+X) ? X*2 : (temp+X) * 2;
-            //trav(it, AV);
-            dc++;
-            if(AV[index] == 0) AV.erase(AV.begin()+index), N--;
-            index = getIndex(AV, X);
-        }
-    }
-    while(N) {
-        //cout<<"index:"<<index<<" "<<"X:"<<X<<endl;
-        //sleep(1);
-        index = index >= int(AV.size()) ? AV.size()-1 : index;
-        cout<<"index:"<<index<<" "<<"X:"<<X<<endl;
-        sleep(1);
-        if(AV[index] - X <= 0) {
-           AV[index] = 0;
-           X *= 2;
-           dc++;
-           AV.erase(AV.begin()+index), N--;
-           index = getIndex(AV, X);
-        }
-        else {
-            if(index == 0 && X < AV[index] / 2) {
-                X*=2;
-                dc++;
+    int c = 0;
+    while(x < MAX_p){
+        int ll = x/2+x%2;
+        auto it = population.lower_bound(ll);
+        auto it_val = *it;
+        if(it!=population.end()){
+            if(it_val>x){
+                x*=2;
             }
             else{
-                //index = doCalc(AV, X, index);
-                //cout<<"TRAV:";
-                //trav(it, AV);
-                //cout<<endl;
-                int temp = AV[index] - X;
-                AV[index] = (temp <= 0) ? 0 : (temp)*2;
-                X = (X<=temp+X) ? X*2 : (temp+X) * 2;
-                cout<<"TRAV:";
-                trav(it, AV);
-                cout<<endl;
-                dc++;
-                if(AV[index] == 0) AV.erase(AV.begin()+index), N--;
-                index = getIndex(AV, X);
+                x = 2*(it_val);
+                population.erase(it);
             }
+            c++;
         }
     }
-    cout<<dc<<endl; 
+    cout << population.size() + c << '\n';
 }
 
 int main()
@@ -121,7 +66,7 @@ int main()
     return 0;
 }
 
-
+/*
 //Correct Solution
 #include <bits/stdc++.h>
 using namespace std;
@@ -159,3 +104,4 @@ int main() {
 	    cout << population.size() + c << '\n';
 	}
 }
+*/
