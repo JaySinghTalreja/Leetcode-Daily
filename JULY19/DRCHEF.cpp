@@ -120,3 +120,42 @@ int main()
     }
     return 0;
 }
+
+
+//Correct Solution
+#include <bits/stdc++.h>
+using namespace std;
+#define watch(x) cout << (#x) << " " << x << '\n' 
+
+int main() {
+	int t;
+	cin >> t;
+	while(t--){
+	    int n,x,MAX_p = 0;
+	    cin >> n >> x;
+	    multiset<int> population;
+	    for(int i=0;i<n;i++){
+	        int p;
+	        cin >> p;
+	        population.insert(p);
+	        MAX_p = max(MAX_p,p);
+	    }
+	    int c = 0;
+	    while(x < MAX_p){
+	        int ll = x/2+x%2;
+	        auto it = population.lower_bound(ll);
+	        auto it_val = *it;
+	        if(it!=population.end()){
+	            if(it_val>x){
+	                x*=2;
+	            }
+	            else{
+	                x = 2*(it_val);
+	                population.erase(it);
+	            }
+	            c++;
+	        }
+	    }
+	    cout << population.size() + c << '\n';
+	}
+}
