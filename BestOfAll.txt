@@ -1,5 +1,4 @@
 **********=>Tough Question
-1066.Campus Bikes II(DFS || Dynamic Programming || Backtracking)
 914. X of a Kind in a Deck of Cards (MATH | GCD) TOUGH BRUTE FORCE
 189. Rotate Array(Array)
 572. Subtree of Another Tree (Binary Tree)
@@ -14,6 +13,7 @@
 26. Remove Duplicates from Sorted Array(Two Pointers)
 219. Contains Duplicate II(Array)
 977. Squares of a Sorted Array(Array)
+904. Fruit Into Baskets (Sliding Window)
 108. Convert Sorted Array to Binary Search Tree (Binary& Search Kinda)
 121. Best Time to Buy and Sell Stocks.cpp(DP||ARRAY||KADANE's Algorithm)
 1170. Compare Strings by the frequence of smallest number (String, Array, Map)
@@ -40,6 +40,7 @@
 
 **********=>UnSolved Problems
 -Sentence Sequence
+1066.Campus Bikes II(DFS || Dynamic Programming || Backtracking) (TOUGH)
 -Strobogrammatic Number (Unsolved)
 359. Logger Rate Limiter (Unsolved)
 157. Read N Characters Given Read4 (Unsolved)
