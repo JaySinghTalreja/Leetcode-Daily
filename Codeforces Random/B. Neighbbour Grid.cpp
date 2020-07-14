@@ -24,8 +24,33 @@ using namespace std;
 #define umll unordered_map<ll, ll>
 #define trav(it, a) for(auto it = a.begin(); it != a.end(); it++) cout<<*it<<" ";
 
+bool check(int row, int col, int i , int j) {
+    return(i>=0 && i<row && j<col && j >=0);
+}
+
+int X[] = {0, -1, 0, 1};
+int Y[] = {-1, 0, 1, 0};
+
 void solve() {
     //Change the return type if necessary
+    int n, m;
+    cin>>n>>m;
+    vector<vector<int>> P(n, vector<int>(m, 0));
+    string ans[] = {"NO\n", "YES\n"};
+    int temp;
+    int init = 1;
+    int rows = P.size();
+    int cols = P[0].size();
+    for(int i=0;i<P.size();i++, ans[1]+="\n")
+    for(int j=0;j<P[i].size();j++) {
+        cin>>temp;
+        int check = (i>0) + (i<rows-1) + (j>0) + (j<cols-1);
+        if(check>=temp)
+            ans[1] +=  to_string(check) + " ";
+        else
+            init = 0;
+    }
+    cout<<ans[init];
 }
 
 int main()
