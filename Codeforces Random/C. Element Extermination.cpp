@@ -5,7 +5,7 @@ using namespace std;
 #define MOD (int) 1e9+7
 //#define ll long long
 #define all(a) a.begin(),a.end()
-#define f0(i, n) for (int i = 0; i < n; i++)
+#define f0(i, n) for (long long i = 0; i < n; i++)
 #define f1(i, n) for (long long i = 1; i <= n; i++)
 #define loop(i,a,b) for (int i = a; i < b; i++)
 #define rloop(i,a,b) for (int i = a ; i>=b;i--)
@@ -28,14 +28,34 @@ void solve() {
     //Change the return type if necessary
     int n;
     cin>>n;
-    vector<int> A;
-    f0(i, n) {
-        int temp;
+    vector<long int> A;
+    int temp;
+    int index=0;
+    f0(i,n) {
         cin>>temp;
-        A.push_back(temp);
+        if(A.size() == 0) A.push_back(temp), index=0;
+        else if(temp > A[index]) {
+            if(index == 0)
+                continue;
+            A[index] = temp;
+        }
+        else{
+            A.push_back(temp);
+            index++;
+        }
     }
-    if(A.front()>A.back()) cout<<"NO\n";
-    else cout<<"YES\n";
+    if(A.size() == 1) cout << "YES\n";
+    else if(A.size() > 1) {
+        f0(i,A.size()-1) {
+            if(A[i]>A[i+1]){
+                cout<<"NO\n";
+                return;
+            }
+        }
+    }
+    else{
+        cout << "NO\n";
+    }
 }
 
 int main()
