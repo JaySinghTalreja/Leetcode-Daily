@@ -27,7 +27,8 @@
 #include <ctime>
 #include <climits>
 using namespace std;
- 
+
+
 //���ڼ��ٴ������ĺ�;
 #define lp for(;;)
 #define repf(i,a,b) for (int i=(a);i<(b);++i)
