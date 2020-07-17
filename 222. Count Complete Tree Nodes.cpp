@@ -31,6 +31,6 @@ public:
             right = right->right;
         }
         if(leftHeight == rightHeight) return (1<<leftHeight)-1;
-        return 1 + countNodes(root->left) + countNodes(root->right); 
+        return 1 + countNodes(root->left) + countNodes(root->right);
     }
 };

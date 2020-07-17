@@ -26,16 +26,31 @@ using namespace std;
 
 void solve() {
     //Change the return type if necessary
-    int n;
-    cin>>n;
-    vector<int> A;
-    f0(i, n) {
-        int temp;
-        cin>>temp;
-        A.push_back(temp);
+    string source, target;
+    cin>>source>>target;
+    //cout<<"Source:"<<source<<endl;
+    //cout<<"Target:"<<target<<endl;
+    int s = source.length();
+    int t = target.length();
+    int totalCount=0;
+
+    for(int i=0;i<t;) {
+        bool isPresent = false;
+        for(int j=0;j<s;j++) {
+            if(i < t && source[j] == target[i]) {
+                isPresent=true;
+                i++;
+            }
+        }
+        if(!isPresent) {
+            cout<<"-1";
+            return;
+        }
+        totalCount++;
     }
-    if(A.front()>A.back()) cout<<"NO\n";
-    else cout<<"YES\n";
+
+    cout<<totalCount<<endl;
+    return;
 }
 
 int main()
