@@ -1,4 +1,1 @@
-3
-abc acdbc
-abc abcbc
-xyz xzyxz
+1

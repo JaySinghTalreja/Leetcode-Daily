@@ -24,33 +24,21 @@ using namespace std;
 #define umll unordered_map<ll, ll>
 #define trav(it, a) for(auto it = a.begin(); it != a.end(); it++) cout<<*it<<" ";
 
+
 void solve() {
     //Change the return type if necessary
-    string source, target;
-    cin>>source>>target;
-    //cout<<"Source:"<<source<<endl;
-    //cout<<"Target:"<<target<<endl;
-    int s = source.length();
-    int t = target.length();
-    int totalCount=0;
-
-    for(int i=0;i<t;) {
-        bool isPresent = false;
-        for(int j=0;j<s;j++) {
-            if(i < t && source[j] == target[i]) {
-                isPresent=true;
-                i++;
-            }
+    vector<int> V = {1,2,3,4,5,6,7,9};
+    int left = 0,right = V.size()-1;
+    while(left < right-1) {
+        int mid = left + (right-left)/2;
+        if(V[mid]-mid == 1) {
+            left = mid+1;
         }
-        if(!isPresent) {
-            cout<<"-1";
-            return;
+        else{
+            right = mid;
         }
-        totalCount++;
     }
-
-    cout<<totalCount<<endl;
-    return;
+    cout<<V[left]+1;
 }
 
 int main()
