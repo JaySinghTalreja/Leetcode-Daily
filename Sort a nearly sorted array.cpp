@@ -21,7 +21,9 @@ int sortK(int arr[], int n, int k)
         cout<<check<<" ";
         pq.pop();
     }
-    //Here K is the index and not the number of elements
+
+
+//---------------Here K is the index and not the number of elements----------------------
     for (int i = k; i < n; i++) { 
         arr[index++] = pq.top();
         pq.pop();
