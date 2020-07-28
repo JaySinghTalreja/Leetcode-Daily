@@ -15,14 +15,6 @@ int sortK(int arr[], int n, int k)
     // i is index for remaining elements in arr[] and index 
     // is target index of for current minimum element in 
     // Min Heapm 'hp'. 
-    int index = 0;
-    while(!pq.empty()) {
-        int check = pq.top();
-        cout<<check<<" ";
-        pq.pop();
-    }
-
-
 //---------------Here K is the index and not the number of elements----------------------
     for (int i = k; i < n; i++) { 
         arr[index++] = pq.top();
