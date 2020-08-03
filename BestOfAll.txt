@@ -61,7 +61,8 @@
 243. Shortest Word Distance(UnSolved)
 1165. Single Row Keyboard(UnSolved)
 1056. Confusing Numbers(UnSolved)
-
+271. Encode and Decode Strings(UnSolved)
+947. Most Stones removed with same rows and columns(Unsolved)
 
 
 **************GENERAL PROBLEMS
