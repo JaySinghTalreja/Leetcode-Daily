@@ -8,6 +8,7 @@
 1007. Minimum Domino Rotations For Equal Row(Array)
 720. Longest Word in Dictionary (String || Trie || HashSet)
 859. Buddy Strings(String)
+1011. Capacity To Ship Packages Within D Days(Binary Search)
 443. String Compression(String || Array) (Medium Level)
 350. Intersection of Two Arrays II(Array)
 122. Best Time to Buy and Sell Stock II(Greedy)

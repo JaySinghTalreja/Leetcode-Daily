@@ -1,3 +1,25 @@
+/*
+//INPUT
+5
+3
+1 2 2
+4
+5 5 5 5
+3
+1 2 4
+4
+1 3 4 4
+1
+100
+
+//OUTPUT
+YES
+YES
+NO
+NO
+YES
+
+*/
 #include <bits/stdc++.h>
 #include <unistd.h>
 using namespace std;
@@ -24,21 +46,53 @@ using namespace std;
 #define umll unordered_map<ll, ll>
 #define trav(it, a) for(auto it = a.begin(); it != a.end(); it++) cout<<*it<<" ";
 
-
-void solve() {
-    //Change the return type if necessary
-    vector<int> V = {1,2,3,4,5,6,7,9};
-    int left = 0,right = V.size()-1;
-    while(left < right-1) {
-        int mid = left + (right-left)/2;
-        if(V[mid]-mid == 1) {
-            left = mid+1;
-        }
-        else{
-            right = mid;
+bool checkSize(map<int, int> &a) {
+    int c=0;
+    //cout<<"MAP:";
+    for(auto D: a) {
+        //cout<<D.first<<" "<<D.second<<endl;
+        if(D.second > 0) {
+            c++;
         }
     }
-    cout<<V[left]+1;
+    return (c == 1) ? true : false; 
+}
+void solve() {
+    //Change the return type if necessary
+    map<int, int> c;
+    int n;
+    cin>>n;
+    int num=0;
+    for(int i=0;i<n;i++) {
+        cin>>num;
+        c[num]++;
+    }
+    //checkSize(c);
+    //cout<<"SIZE:"<<c.size();
+    for(auto D: c) {
+        if(c.find(D.first+1) != c.end() && c[D.first+1] != 0) {
+            c[D.first]--;
+        }
+        else if(c.find(D.first-1) != c.end() && c[D.first-1] != 0) {
+            //cout<<"D:"<<D.first<<" "<<D.second;
+            c[D.first]--;
+        }
+        else if(checkSize(c)){
+            cout<<"YES";
+            cout<<endl;
+            return;
+        }
+        else{
+            cout<<"NO";
+            cout<<endl;
+            return;
+        }
+    }
+    //checkSize(c);
+    cout<<"NO";
+    cout<<endl;
+    return;
+
 }
 
 int main()
