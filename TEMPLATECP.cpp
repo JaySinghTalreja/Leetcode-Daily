@@ -48,20 +48,18 @@ using namespace std;
 
 void solve() {
     //Change the return type if necessary
-    long int left, right;
-    cin>>left>>right;
-    while(1) {
-        left = left - right;
-        if(left <= 0) {
-            cout<<"1"<<endl;
-            return;
-        }
-        right = (right == 1) ? 0 :(right/2); 
-        if(right <= 0) {
-            cout<<"0"<<endl;
-            return;
+    int N, K;
+    cin>>N>>K;
+    int temp;
+    pair<int, int> ans({-1, INT_MAX});
+    for(int i=0;i<N;i++) {
+        cin>>temp;
+        if(temp > K) continue;
+        else if(K%temp == 0) {
+            ans = ((K/temp)-1 < ans.second) ? make_pair(temp, ((K/temp)-1)) : ans; 
         }
     }
+    cout<<ans.first<<endl;
 }
 
 int main()
