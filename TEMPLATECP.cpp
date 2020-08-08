@@ -21,49 +21,61 @@ using namespace std;
 #define deb(x) cout << #x << "=" << x << endl
 #define deb2(x, y) cout << #x << "=" << x << "," << #y << "=" << y << endl
 #define sortall(x) sort(all(x))
-#define umll unordered_map<ll, ll>
+#define umll unordered_map<ll, ll>exit
 #define trav(it, a) for(auto it = a.begin(); it != a.end(); it++) cout<<*it<<" ";
 
 void solve() {
     //Change the return type if necessary
-    long int N, K, temp;
-    cin>>N>>K;
-    vector<long int> A;
-    for(long int i=0;i<N;i++) {
-        cin>>temp;
-        A.push_back(temp);
-    }
-    long int currentIndex = 0;
-    long int currentMax = INT_MAX;
-    while(K>0) {
-        long int currentValue = A[currentIndex];
-        if(currentValue <= currentMax) {
-            sort(all(A), greater<long int>());
-            currentIndex = 0;
-            currentMax = A[0]/2;
-            continue;
+    int D, P;
+    cin>>D>>P; 
+    bool isPrime[D+1];
+    memset(isPrime, true, sizeof(isPrime));
+    isPrime[1] = false;
+    for(int i=2;i*i<=D;i++) {
+        if(isPrime[i] == true) {
+            for(int j = i*2;j<=D;j+=i) {
+                isPrime[j] = false;
+                //cout<<"D";
+            }
         }
-        K--;
-        currentValue /= 2;
-        A[currentIndex] = currentValue;
-        if(currentIndex < N-1) currentIndex++; 
+        //cout<<"M";
     }
-    long int sum = accumulate(all(A), 0);
-    cout<<sum;
+    /*for(int i=2;i<=D;i++) {
+        cout<<i<<" "<<isPrime[i]<<endl;
+    }*/
+
+    int K = D/P;
+    int cnt=0;
+    for(int i=2;i<=K;i++) {
+        if(isPrime[i] == true) {
+            int index = i;
+            bool flag = true;
+            while(index+K <= D) {
+                index += K;
+                if(!isPrime[index]) {
+                    flag = false;
+                    break;
+                }
+            }
+            if(flag == true){
+                cnt++;
+            }
+        }
+    }
+    cout<<cnt;
 }
 
 int main()
 {
-    fast;
-    /*
-    #ifndef ONLINE_JUDGE
+    /*#ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif
     fast;
     tc(t) {
         solve();
-    }*/
+    }
+    */
     solve();
     return 0;
 }
