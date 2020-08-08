@@ -1,25 +1,3 @@
-/*
-//INPUT
-5
-3
-1 2 2
-4
-5 5 5 5
-3
-1 2 4
-4
-1 3 4 4
-1
-100
-
-//OUTPUT
-YES
-YES
-NO
-NO
-YES
-
-*/
 #include <bits/stdc++.h>
 #include <unistd.h>
 using namespace std;
@@ -33,7 +11,7 @@ using namespace std;
 #define rloop(i,a,b) for (int i = a ; i>=b;i--)
 #define tc(t) unsigned int t; cin >> t; while (t--)
 #define fast ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
-#define maxpq priority_queue<int>
+#define maxpq priority_queue<long long int>
 #define minpq priority_queue<int, vector<int>, greater<int> >
 #define F first
 #define S second
@@ -48,22 +26,36 @@ using namespace std;
 
 void solve() {
     //Change the return type if necessary
-    int N, K;
+    long int N, K, temp;
     cin>>N>>K;
-    int temp;
-    pair<int, int> ans({-1, INT_MAX});
-    for(int i=0;i<N;i++) {
+    vector<long int> A;
+    for(long int i=0;i<N;i++) {
         cin>>temp;
-        if(temp > K) continue;
-        else if(K%temp == 0) {
-            ans = ((K/temp)-1 < ans.second) ? make_pair(temp, ((K/temp)-1)) : ans; 
-        }
+        A.push_back(temp);
     }
-    cout<<ans.first<<endl;
+    long int currentIndex = 0;
+    long int currentMax = INT_MAX;
+    while(K>0) {
+        long int currentValue = A[currentIndex];
+        if(currentValue <= currentMax) {
+            sort(all(A), greater<long int>());
+            currentIndex = 0;
+            currentMax = A[0]/2;
+            continue;
+        }
+        K--;
+        currentValue /= 2;
+        A[currentIndex] = currentValue;
+        if(currentIndex < N-1) currentIndex++; 
+    }
+    long int sum = accumulate(all(A), 0);
+    cout<<sum;
 }
 
 int main()
 {
+    fast;
+    /*
     #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
@@ -71,6 +63,7 @@ int main()
     fast;
     tc(t) {
         solve();
-    }
+    }*/
+    solve();
     return 0;
 }
