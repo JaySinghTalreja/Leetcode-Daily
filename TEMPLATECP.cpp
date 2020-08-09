@@ -9,7 +9,7 @@ using namespace std;
 #define f1(i, n) for (long long i = 1; i <= n; i++)
 #define loop(i,a,b) for (int i = a; i < b; i++)
 #define rloop(i,a,b) for (int i = a ; i>=b;i--)
-#define tc(t) unsigned int t; cin >> t; while (t--)
+#define tc(t) int t; cin >> t; while (t--)
 #define fast ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
 #define maxpq priority_queue<long long int>
 #define minpq priority_queue<int, vector<int>, greater<int> >
@@ -26,17 +26,23 @@ using namespace std;
 
 void solve() {
     //Change the return type if necessary
-    long long int C, R;
+    int C, R;
     cin>>C>>R;
     //Calculating Chef's Power
-    long long int DC=LLONG_MAX, DR=LLONG_MAX;
+    int DC=INT_MAX, DR=INT_MAX;
     for(int i=1;i<=9;i++) {
         DC = min(DC, (C/i + C%i));
     }
+    
     //Caculating Rick's Power
     for(int i=1;i<=9;i++) {
         DR = min(DR, (R/i + R%i));
     }
+
+    /*
+    DC = (C%9 ==0) ? (C/9) : ((C/9)+1);
+    DR = (R%9 == 0) ? (R/9) : ((R/9)+1);
+    */
     if(DC==DR) {
         cout<<"1"<<" "<<DC;
     }
