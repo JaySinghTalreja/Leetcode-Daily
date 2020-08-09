@@ -26,48 +26,11 @@ using namespace std;
 
 void solve() {
     //Change the return type if necessary
-    int D, P;
-    cin>>D>>P; 
-    bool isPrime[D+1];
-    memset(isPrime, true, sizeof(isPrime));
-    isPrime[1] = false;
-    for(int i=2;i*i<=D;i++) {
-        if(isPrime[i] == true) {
-            for(int j = i*2;j<=D;j+=i) {
-                isPrime[j] = false;
-                //cout<<"D";
-            }
-        }
-        //cout<<"M";
-    }
-    /*for(int i=2;i<=D;i++) {
-        cout<<i<<" "<<isPrime[i]<<endl;
-    }*/
-
-    int K = D/P;
-    int cnt=0;
-    for(int i=2;i<=K;i++) {
-        if(isPrime[i] == true) {
-            int index = i;
-            bool flag = true;
-            while(index+K <= D) {
-                index += K;
-                if(!isPrime[index]) {
-                    flag = false;
-                    break;
-                }
-            }
-            if(flag == true){
-                cnt++;
-            }
-        }
-    }
-    cout<<cnt;
 }
 
 int main()
 {
-    /*#ifndef ONLINE_JUDGE
+    #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif
@@ -75,7 +38,5 @@ int main()
     tc(t) {
         solve();
     }
-    */
-    solve();
     return 0;
 }
