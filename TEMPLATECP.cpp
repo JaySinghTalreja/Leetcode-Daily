@@ -26,6 +26,27 @@ using namespace std;
 
 void solve() {
     //Change the return type if necessary
+    long long int C, R;
+    cin>>C>>R;
+    //Calculating Chef's Power
+    long long int DC=LLONG_MAX, DR=LLONG_MAX;
+    for(int i=1;i<=9;i++) {
+        DC = min(DC, (C/i + C%i));
+    }
+    //Caculating Rick's Power
+    for(int i=1;i<=9;i++) {
+        DR = min(DR, (R/i + R%i));
+    }
+    if(DC==DR) {
+        cout<<"1"<<" "<<DC;
+    }
+    else if(DC < DR) {
+        cout<<"0"<<" "<<DC;
+    }
+    else {
+        cout<<"1"<<" "<<DR;
+    }
+    cout<<endl;
 }
 
 int main()
