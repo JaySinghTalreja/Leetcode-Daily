@@ -26,33 +26,52 @@ using namespace std;
 
 void solve() {
     //Change the return type if necessary
-    int C, R;
-    cin>>C>>R;
-    //Calculating Chef's Power
-    int DC=INT_MAX, DR=INT_MAX;
-    for(int i=1;i<=9;i++) {
-        DC = min(DC, (C/i + C%i));
-    }
-    
-    //Caculating Rick's Power
-    for(int i=1;i<=9;i++) {
-        DR = min(DR, (R/i + R%i));
+    string S, P;
+    cin>>S>>P;
+    unordered_map<char, long int> cnt;
+
+    for(long int i=0;i<S.size();i++){
+        cnt[S[i]]++;
     }
 
-    /*
-    DC = (C%9 ==0) ? (C/9) : ((C/9)+1);
-    DR = (R%9 == 0) ? (R/9) : ((R/9)+1);
-    */
-    if(DC==DR) {
-        cout<<"1"<<" "<<DC;
+    for(long int i=0; i<P.size();i++) {
+        cnt[P[i]]--;
     }
-    else if(DC < DR) {
-        cout<<"0"<<" "<<DC;
+
+    //long int prevCount=0, fCount=0;
+    //long int fLength = P.size();
+    string prev = "", equal = "", post = "";
+    for(auto &A: cnt) {
+        if(A.second <=0) continue;
+        if(A.first < P[0]) {
+            while(A.second != 0) {
+                prev += A.first;
+                A.second--;
+            }
+        }
+        else if(A.first == P[0]) {
+            while(A.second != 0) {
+                equal += A.first;
+                A.second--;
+            }
+        }
+        else{
+            while(A.second != 0) {
+                post += A.first;
+                A.second--;
+            }
+        }
     }
-    else {
-        cout<<"1"<<" "<<DR;
-    }
-    cout<<endl;
+
+    sort(prev.begin(), prev.end());
+    sort(equal.begin(), equal.end());
+    sort(all(post));
+    string ans = min((prev+equal+P+post), (prev+P+equal+post));
+    cout<<ans<<endl;
+    /*sort(P.begin(), P.begin()+prevCount);
+    sort(P.begin()+prevCount+fLength, P.end());
+    */;
+    //cout<<P<<endl;
 }
 
 int main()
@@ -67,3 +86,7 @@ int main()
     }
     return 0;
 }
+
+
+//Time Complexity O(m*o) = M is the range (r - l) and o is the length of string having our final produc
+//Space Compleixty O(o)
