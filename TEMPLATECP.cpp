@@ -41,6 +41,7 @@ void solve() {
     //long int prevCount=0, fCount=0;
     //long int fLength = P.size();
     string prev = "", equal = "", post = "";
+    
     for(auto &A: cnt) {
         if(A.second <=0) continue;
         if(A.first < P[0]) {
@@ -68,6 +69,7 @@ void solve() {
     sort(all(post));
     string ans = min((prev+equal+P+post), (prev+P+equal+post));
     cout<<ans<<endl;
+
     /*sort(P.begin(), P.begin()+prevCount);
     sort(P.begin()+prevCount+fLength, P.end());
     */;
@@ -86,7 +88,3 @@ int main()
     }
     return 0;
 }
-
-
-//Time Complexity O(m*o) = M is the range (r - l) and o is the length of string having our final produc
-//Space Compleixty O(o)
