@@ -84,3 +84,58 @@ void printGivenLevel(struct node* root, int level, int ltr)
         } 
     } 
 }
+
+//Deque Solution
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
+        vector<vector<int>> output;
+        if(!root) {
+            return output;
+        }
+        deque<TreeNode*> D;
+        D.push_back(root);
+        bool lefttoright = true;
+        int size = 1;
+        vector<int> T;
+        while(!D.empty()) {
+            
+            while(size--) {
+                TreeNode* temp = (lefttoright) ? D.front() : D.back();
+                if(lefttoright) {
+                    D.pop_front();
+                }
+                else{
+                    D.pop_back();
+                }
+                T.push_back(temp->val);
+                if(!lefttoright) {
+                    if(temp->right) D.push_front(temp->right);
+                    if(temp->left) D.push_front(temp->left);
+                }
+                else{
+                    if(temp->left) D.push_back(temp->left);
+                    if(temp->right) D.push_back(temp->right);
+                }
+                //lefttoright = !lefttoright;
+            }
+            
+            output.push_back(T);
+            lefttoright = !lefttoright;
+            size = D.size();
+            T.clear();
+        }
+        return output;
+    }
+};
