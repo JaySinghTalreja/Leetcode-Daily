@@ -30,7 +30,7 @@ public:
     }
 };
 
-//Time Complexity O(n3);
+//Time Complexity O(n3) , Space O(n^2) ;
 //Also Refer https://www.techiedelight.com/word-break-problem/
 
 
