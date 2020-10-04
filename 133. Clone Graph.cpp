@@ -25,6 +25,27 @@ public:
 class Solution {
 public:
     Node* cloneGraph(Node* node) {
+        if(node == NULL) {
+            return NULL;
+        }
+        unordered_map<Node*, Node*> visited;
+        queue<Node*> varQueue;
+        varQueue.push(node);
         
+        Node* Clone = new Node(node->val);
+        visited[node] = Clone;
+        
+        while(!varQueue.empty()) {
+            Node* temp = varQueue.front();
+            varQueue.pop();
+            for(Node* neigh : temp->neighbors) {
+                if(visited.find(neigh) == visited.end()) {
+                    visited[neigh] = new Node(neigh->val);
+                    varQueue.push(neigh);
+                }
+                visited[temp]->neighbors.push_back(visited[neigh]);
+            }
+        }
+        return Clone;
     }
 };
