@@ -32,7 +32,10 @@ public:
         */
         return DP[T.size()][S.size()];
     }
-    /*unordered_map<string, int> varMap;
+
+
+    //Recursion + Memoization
+    unordered_map<string, int> varMap;
     int solve(string &S, string &T, int i, int j) {
         string cache = to_string(i) + "|" + to_string(j);
         if(varMap.find(cache) != varMap.end()) {
@@ -49,7 +52,6 @@ public:
         }
         return varMap[cache] = solve(S, T, i-1, j);
     }
-    */
     
     int numDistinct(string s, string t) {
         //return solve(s, t, s.size()-1, t.size()-1); //Recursive + Memoization
