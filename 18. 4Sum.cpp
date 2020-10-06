@@ -1,3 +1,4 @@
+O(N*N*N) = O(N^3)
 class Solution {
 public:
     vector<vector<int>> fourSum(vector<int>& nums, int target) {
