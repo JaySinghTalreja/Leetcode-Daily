@@ -37,7 +37,7 @@ public:
             while (i <= j && pro >= k) {
                 pro /= nums[i++];
             }
-            cnt += j - i + 1;
+            cnt += j - i + 1;               //Notice we have +1 here to tackle the last element | Also if there is only one element
         }
         return cnt;
     }
