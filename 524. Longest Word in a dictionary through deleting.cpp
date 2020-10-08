@@ -1,8 +1,9 @@
 class Solution {
 public:
+
     string findLongestWord(string s, vector<string>& d) {
         sort(d.begin(), d.end(), [&](string A, string B) {
-            return A < B;
+            return A < B;                       //Lexicographic Order Sorting  || Important to note
         });
         string finalString = "";
         for(int i=0;i<d.size();i++) {
@@ -25,5 +26,9 @@ public:
         }
         return finalString;
     }
+
 };
 // o(NlogN + N*M + K) Where N = Number of words in dictionary, M = Word with maximum Length, and K = Length of the Given String with which we a comparing.
+
+
+//Tried DP as well, Gave me TLE
