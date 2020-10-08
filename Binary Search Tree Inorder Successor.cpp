@@ -114,3 +114,126 @@ int main()
 
 
 //Refer Techie Delight for Inputs
+
+
+
+
+//Iterative Version
+#include <iostream>
+using namespace std;
+
+// Data structure to store a Binary Search Tree node
+struct Node {
+	int data;
+	Node *left, *right;
+};
+
+// Function to create a new binary tree node having given key
+Node* newNode(int key)
+{
+	Node* node = new Node;
+	node->data = key;
+	node->left = node->right = nullptr;
+
+	return node;
+}
+
+// Recursive function to insert a key into BST
+Node* insert(Node* root, int key)
+{
+	// if the root is null, create a new node and return it
+	if (root == nullptr)
+		return newNode(key);
+
+	// if given key is less than the root node, recur for left subtree
+	if (key < root->data)
+		root->left = insert(root->left, key);
+
+	// if given key is more than the root node, recur for right subtree
+	else
+		root->right = insert(root->right, key);
+
+	return root;
+}
+
+// Helper function to find minimum value node in given BST
+Node* findMinimum(Node* root)
+{
+	while (root->left)
+		root = root->left;
+
+	return root;
+}
+
+// Iterative function to find inorder successor for given key in a BST
+Node* findSuccessor(Node* root, int key)
+{
+	Node* succ = nullptr;
+
+	while (1)
+	{
+		// if given key is less than the root node, visit left subtree
+		if (key < root->data)
+		{
+			// update successor to current node before visiting left subtree
+			succ = root;
+			root = root->left;
+		}
+
+		// if given key is more than the root node, visit right subtree
+		else if (key > root->data)
+		{
+			root = root->right;
+		}
+
+		// if node with key's value is found, the successor is minimum value
+		// node in its right subtree (if any)
+		else
+		{
+			if (root->right)
+				succ = findMinimum(root->right);
+			break;
+		}
+
+		// if key doesn't exist in binary tree
+		if (!root)
+			return nullptr;
+	}
+
+	// return Successor if any
+	return succ;
+}
+
+int main()
+{
+	/* Construct below tree
+               15
+             /    \
+            /      \
+           10       20
+          / \      /  \
+         /   \    /    \
+        8    12  16    25
+	*/
+
+	int keys[] = { 15, 10, 20, 8, 12, 16, 25 };
+
+	Node* root = nullptr;
+	for (int key : keys)
+		root = insert(root, key);
+
+	// find in-order successor for each key
+	for (int key : keys)
+	{
+		Node* prec = findSuccessor(root, key);
+
+		if (prec != nullptr)
+			cout << "Successor of node " << key << " is " << prec->data;
+		else
+			cout << "Successor doesn't exists for " << key;
+
+		cout << '\n';
+	}
+
+	return 0;
+}
