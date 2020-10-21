@@ -19,7 +19,7 @@ public:
             temp = temp->next;
         }
         temp->next = head;
-        k = length-(k%length);
+        k = length-(k%length); //Note
         while(k--) {
             temp = temp->next;
         }
