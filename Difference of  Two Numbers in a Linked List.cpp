@@ -1,6 +1,7 @@
 class Solution {
 public:
     ListNode* DiffereceList(ListNode* L1, ListNode* L2) {
+
         if(!L1) {
             return L2;
         }
@@ -22,11 +23,12 @@ public:
         int difference = (numOne >= numTwo) ? (numOne-numTwo) : (numTwo - numOne);
         ListNode *head = new ListNode(difference % 10);
         difference /= 10;
-        ListNode *temp = head;
+        ListNode *temp = NULL;
         while(difference > 0) {
-            temp->next = newNode(difference % 10);
+            temp = newNode(difference % 10);
+            temp->next = head;
+            head = temp;
             difference / = 10;
-            temp = temp->next;
         }
         return head;
 
