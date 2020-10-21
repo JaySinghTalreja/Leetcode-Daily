@@ -27,9 +27,11 @@ void removeAlternateDups(char inp[], int len)
 
 int main()
 {
-    char inp[] = "we are living in a beautiful world";
+    char inp[] = "abcacdef";            //C Style Char Array
     int size = sizeof(inp) / sizeof(inp[0]);
-    removeAlternateDups(inp, size);
-    cout << inp << endl;
+    removeAlternateDups(inp, size);  // size is 9 as there is a \n at the end.
+    cout << inp << endl;  //It's Size is still the same except a \n is added as the last character
+    size = sizeof(inp) / sizeof(inp[0]);
+    cout<<"\nSize:"<<size;
     return 0;
 }
