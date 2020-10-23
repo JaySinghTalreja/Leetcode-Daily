@@ -17,6 +17,7 @@
         "*.tcc": "cpp",
         "iostream": "cpp",
         "random": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "rope": "cpp"
     }
 }
