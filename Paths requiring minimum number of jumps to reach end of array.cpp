@@ -26,11 +26,11 @@ using namespace std;
 
 int minSize = INT_MAX;
 vector<vector<int>> finalAns;
-unordered_map<string, int> CACHE;
-int allPaths(vector<int> &A, int index, vector<int> &tempPath) {
-    string key = to_string(index);
 
-    if(CACHE.find(key) != CACHE.end()) {
+int allPaths(vector<int> &A, int index, vector<int> &tempPath, vector<int> &CACHE) {
+    int key = index;
+
+    if(CACHE[key] != INT_MIN) {
         cout<<"\nCache Hits";
         return CACHE[key];
     }
@@ -44,6 +44,7 @@ int allPaths(vector<int> &A, int index, vector<int> &tempPath) {
         finalAns.push_back(tempPath);
         tempPath.pop_back();
         return INT_MIN;
+
     }
 
     if(index >= A.size()) {
@@ -55,7 +56,7 @@ int allPaths(vector<int> &A, int index, vector<int> &tempPath) {
     tempPath.push_back(index);
     for(int i=varElement;i>=1;i--) {
         if(index + i <= A.size() - 1) {
-            CACHE[key] = max(CACHE[key], allPaths(A, index+i, tempPath) );
+            CACHE[key] = max(CACHE[key], allPaths(A, index+i, tempPath, CACHE) );
         }
     }
     tempPath.pop_back();
@@ -66,7 +67,8 @@ void solve() {
     //Write Your Code Here
     vector<int> A {3, 3, 0, 2, 1, 2, 4, 2, 0, 0};
     vector<int> tempPath;
-    allPaths(A, 0, tempPath);
+    vector<int> CACHE{INT_MIN, A.size()};
+    allPaths(A, 0, tempPath, CACHE);
     cout<<endl;
     for(auto vect : finalAns) {
         for(auto varElements: vect) {

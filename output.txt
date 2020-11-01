@@ -1,7 +1,1 @@
-
-Cache Hits
-Cache Hits
-Cache Hits
-Cache Hits
-0 3 5 7 9 
-0 3 5 6 9 
+10 11 7 6 5 9 13 14 15 16 12 8 4 3 2 1 
