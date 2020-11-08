@@ -75,6 +75,7 @@ void solve() {
                             {13, 14, 15, 16}
                         };
                             //Rows = 4, Cols = 4
+    //Output: 10 11 7 6 5 9 13 14 15 16 12 8 4 3 2 1 
     stack<int> reverseStack;
     printReverse(Mat, 0, 0, Mat.size()-1, Mat[0].size()-1, reverseStack);
     while(!reverseStack.empty()) {
