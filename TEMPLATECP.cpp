@@ -31,19 +31,34 @@ using namespace std;
 
 void solve() {
 
-    vector<int> A{1, 2, 90, 10, 110};
-    int maxElement = A[A.size()-1];
-    int maxDiff = INT_MIN;
-    for(int i=int(A.size())-2;i>=0;i--){
-        int diff = maxElement - A[i];
-        if(diff > maxDiff) {
-            maxDiff = diff;
+    vector<int> A{-2, -3, 0, -2, -40};
+    int maxHere = 1;
+    int minHere = 1;
+    int maxSoFar = INT_MIN;
+    int flag = false;
+    for(int i =0;i<A.size();i++) {
+        if(A[i] > 0) {
+            flag = true;
+            maxHere = maxHere * A[i];
+            minHere = min(minHere * A[i], 1);
         }
-        if(A[i] > maxElement) {
-            maxElement = A[i];
+        else if(A[i] < 0) {
+            int temp = maxHere;
+            maxHere = max(minHere * A[i], 1);
+            minHere = maxHere * A[i];
+        }
+        else{
+            minHere = 1;
+            maxHere = 1;
+        }
+        if(maxSoFar < maxHere) {
+            maxSoFar = maxHere;
         }
     }
-    cout<<maxDiff;
+    if(!flag && maxSoFar == 1) {
+        return 0;
+    }
+    return maxSoFar;
 }
 
 
