@@ -29,36 +29,36 @@ using namespace std;
 
 //O(N^2) Solution
 
-void solve() {
+void findFactorial(vector<int> &A, int X) {
+    int n = A.size();
+    int carry = 0;
+    for(int i=0;i<n;i++) {
+        int indexProd = (A[i] * X) + carry;
+        A[i] = indexProd % 10;
+        carry = indexProd / 10;
+    }
+    while(carry) {
+        A.push_back(carry%10);
+        carry /= 10;
+    }
+}
 
-    vector<int> A{-2, -3, 0, -2, -40};
-    int maxHere = 1;
-    int minHere = 1;
-    int maxSoFar = INT_MIN;
-    int flag = false;
-    for(int i =0;i<A.size();i++) {
-        if(A[i] > 0) {
-            flag = true;
-            maxHere = maxHere * A[i];
-            minHere = min(minHere * A[i], 1);
-        }
-        else if(A[i] < 0) {
-            int temp = maxHere;
-            maxHere = max(minHere * A[i], 1);
-            minHere = maxHere * A[i];
-        }
-        else{
-            minHere = 1;
-            maxHere = 1;
-        }
-        if(maxSoFar < maxHere) {
-            maxSoFar = maxHere;
-        }
+void solve() {
+    //Factorial of a large Number;
+    int X = 10;
+    if(X == 1) {
+        cout<<1;
+        return;
     }
-    if(!flag && maxSoFar == 1) {
-        return 0;
+    vector<int> result;
+    result.push_back(1);
+    for(int i=2;i<=X;i++) {
+        findFactorial(result, i);
     }
-    return maxSoFar;
+    int n = result.size()-1;
+    for(int i = n;i>=0;i--) {
+        cout<<result[i];
+    }
 }
 
 

@@ -1,35 +1,36 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void multiply(int &len, vector<int> &res, int i) {
+void findFactorial(vector<int> &A, int X) {
+    int n = A.size();
     int carry = 0;
-    for(int index=0;index<len;index++) {
-        int num = (res[index] * i) + carry;
-        res[index] = num % 10;
-        carry = num / 10;
+    for(int i=0;i<n;i++) {
+        int indexProd = (A[i] * X) + carry;
+        A[i] = indexProd % 10;
+        carry = indexProd / 10;
     }
     while(carry) {
-        res.push_back(carry % 10);
+        A.push_back(carry%10);
         carry /= 10;
-        len++;
     }
 }
 
 void solve() {
-    vector<int> result;
-    int x = 5;
-    result.push_back(1);
-    int len = 1;
-
-    for(int i=2;i<=x;i++) {
-        multiply(len, result, i);
+    //Factorial of a large Number;
+    int X = 10;
+    if(X == 1) {
+        cout<<1;
+        return;
     }
-    
-    for(int i = len - 1 ;i>=0;i--)  {
+    vector<int> result;
+    result.push_back(1);
+    for(int i=2;i<=X;i++) {
+        findFactorial(result, i);
+    }
+    int n = result.size()-1;
+    for(int i = n;i>=0;i--) {
         cout<<result[i];
     }
-    
-
 }
 
 int main()
