@@ -26,6 +26,7 @@ int mergeCount(vector<int> &A, int left, int mid, int right) {
         else if(rightArr[j] < leftArr[i]) {
             
             A[k++] = rightArr[j];
+            //REMEBER THIS FORMULA TOO IMPORTANT
             int counts = (mid+1) - (left+i);
             totalInverts += counts;
             //IMP STEP NOTE THIS
