@@ -24,41 +24,47 @@ using namespace std;
 #define umll unordered_map<ll, ll>exit
 #define trav(it, a) for(auto it = a.begin(); it != a.end(); it++) cout<<*it<<" ";
 
-//Linear Time
 
 
-//O(N^2) Solution
 
-void findFactorial(vector<int> &A, int X) {
-    int n = A.size();
-    int carry = 0;
-    for(int i=0;i<n;i++) {
-        int indexProd = (A[i] * X) + carry;
-        A[i] = indexProd % 10;
-        carry = indexProd / 10;
+void heapify(vector<int> &A,int size ,int index) {
+    int leftChild = 2*index+1;
+    int rightChild = 2*index+2;
+    int smallest = index;
+    if(leftChild < size && A[leftChild] < A[smallest]) {
+        smallest = leftChild;
     }
-    while(carry) {
-        A.push_back(carry%10);
-        carry /= 10;
+    if(rightChild < size && A[rightChild] < A[smallest]) {
+        smallest = rightChild;
     }
+    if(smallest != index) {
+        swap(A[smallest], A[index]);
+        heapify(A, size, smallest);
+    }
+
+}
+
+void heapSort(vector<int> &A) {
+
+    //vector<int> A{1, 4, -3, 6, 8, -11, 34, 23};
+    for(int i = A.size()-1;i>=0;i--) {
+        heapify(A, A.size(), i);
+    }
+
+    for(int i= A.size()-1;i>0;i--) {
+        swap(A[0], A[i]);
+        heapify(A, i, 0);
+    }
+
+    for(auto C: A) {
+        cout<<C<<" ";
+    }
+    
 }
 
 void solve() {
-    //Factorial of a large Number;
-    int X = 10;
-    if(X == 1) {
-        cout<<1;
-        return;
-    }
-    vector<int> result;
-    result.push_back(1);
-    for(int i=2;i<=X;i++) {
-        findFactorial(result, i);
-    }
-    int n = result.size()-1;
-    for(int i = n;i>=0;i--) {
-        cout<<result[i];
-    }
+    vector<int> A{0, 9, 1, 45, -2, 7, 11, 23, 5};
+    heapSort(A);
 }
 
 

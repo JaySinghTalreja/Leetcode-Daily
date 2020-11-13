@@ -19,6 +19,8 @@
         "random": "cpp",
         "variant": "cpp",
         "rope": "cpp",
-        "*.rh": "cpp"
+        "*.rh": "cpp",
+        "chrono": "cpp",
+        "complex": "cpp"
     }
 }

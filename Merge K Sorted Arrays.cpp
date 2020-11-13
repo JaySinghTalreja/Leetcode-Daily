@@ -94,7 +94,7 @@ void solve(vector<vector<int>> &A, vector<int> &ans) {
 }
 int main()
 {
-    vector<vector<int>> A{{0, 1, 5, 7}, {2, 4, 6, 8}, {3, 10, 11, 13}};
+    vector<vector<int>> A{ {0, 1, 5, 7}, {2, 4, 6, 8}, {3, 10, 11, 13} };
     vector<int> ans;
     solve(A, ans);
     for(auto element: ans) {
