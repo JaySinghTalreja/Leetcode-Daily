@@ -38,6 +38,7 @@ using namespace std;
 
 
 void heapify(vector<int> &A, int heapSize, int index) {
+    
     int leftChild = 2*index + 1;
     int rightChild = 2*index +2;
     int smallest = index;
@@ -47,20 +48,19 @@ void heapify(vector<int> &A, int heapSize, int index) {
     if(rightChild < heapSize && A[rightChild] < A[smallest]) {
         smallest = rightChild;
     }
-
     if(smallest != index) {
         swap(A[smallest], A[index]);
         heapify(A, heapSize, smallest);
     }
+
 }
 
 
 int KthHeapSort(vector<int> &A, int K) {
+    
     for(int i=A.size()/2-1;i>=0;i--) {
         heapify(A, A.size(), i);
     }
-    
-    
     for(int i = A.size()-1; i > 0; i--) {
         swap(A[0], A[i]);
         heapify(A, i, 0);
@@ -71,6 +71,7 @@ int KthHeapSort(vector<int> &A, int K) {
     }
     cout<<"\nELEMENT:";
     return A[A.size()-K];
+
 }
 
 void solve() {
