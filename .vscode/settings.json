@@ -21,6 +21,7 @@
         "rope": "cpp",
         "*.rh": "cpp",
         "chrono": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "ostream": "cpp"
     }
 }

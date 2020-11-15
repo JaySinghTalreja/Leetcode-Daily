@@ -28,6 +28,9 @@ using namespace std;
 //Funct Declarations
 
 
+//Time O(N) - Best , If(Pivot is chosen wisely);
+//Worst O(N^2)
+
 int partition(vector<int> &A, int left, int right) {
     srand(time(NULL));
     int pivotIndex = left + rand() % (right-left);
