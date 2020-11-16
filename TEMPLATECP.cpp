@@ -27,26 +27,42 @@ using namespace std;
 
 //Funct Declarationss
 
-void solve() {
 
-    vector<int> A{6, 5, 4, 3, 2, 1};
-    vector<int> rightMax(A.size());
-    vector<int> leftMin(A.size());
-    rightMax[rightMax.size()-1] = A[A.size()-1];
-    for(int i = A.size()-2;i>=0;i--) {
-        rightMax[i] = max(A[i], rightMax[i+1]);
-    }
-    int count = INT_MIN;
-    int j = 0;
-    for(int i=0;i<A.size() && j < rightMax.size();i++) {
-        while(j < rightMax.size() && A[i] < rightMax[j]) {
-            j++;
+int binarySearch(vector<int> &temp, int element) {
+
+
+    int left = 0, right = temp.size()-1;
+    while(left <= right) {
+        if(left >= right) {
+            return temp[left];
         }
-        count = max(count, j-i-1);
+
+        int mid = left + (right-left)/2;
+        if(temp[mid] == element) return element;
+        if(temp[mid] < element) left = mid+1;
+        else right = mid; 
     }
-    count == 0 ? cout<<-1 : cout<<count;
+
+
+}
+
+void solve() {
+    pair<int, pair<int, int>> finalOutput;
+    int maxDiff = INT_MAX;
+    vector<int> A{20, 24, 100}, B{2, 19, 22, 79, 800}, C{10, 12, 23, 24, 119};
+    for(int i = 0;i<A.size();i++) {
+        int bVar = binarySearch(B, A[i]);
+        int cVar = binarySearch(C, A[i]);
+        int diffCount = max( abs(A[i] - bVar), max( abs(bVar - cVar), abs(cVar - A[i])));
+        if(diffCount < maxDiff) {
+
+            maxDiff = diffCount;
+            finalOutput = {A[i], {bVar, cVar}};
+
+        }
+    }
+    cout<<finalOutput.first<<" "<<finalOutput.second.first<<" "<<finalOutput.second.second;
     return;
-    
 }
 
 int main()
