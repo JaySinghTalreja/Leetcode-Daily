@@ -28,41 +28,13 @@ using namespace std;
 //Funct Declarationss
 
 
-int binarySearch(vector<int> &temp, int element) {
-
-
-    int left = 0, right = temp.size()-1;
-    while(left <= right) {
-        if(left >= right) {
-            return temp[left];
-        }
-
-        int mid = left + (right-left)/2;
-        if(temp[mid] == element) return element;
-        if(temp[mid] < element) left = mid+1;
-        else right = mid; 
-    }
-
-
-}
 
 void solve() {
-    pair<int, pair<int, int>> finalOutput;
-    int maxDiff = INT_MAX;
-    vector<int> A{20, 24, 100}, B{2, 19, 22, 79, 800}, C{10, 12, 23, 24, 119};
-    for(int i = 0;i<A.size();i++) {
-        int bVar = binarySearch(B, A[i]);
-        int cVar = binarySearch(C, A[i]);
-        int diffCount = max( abs(A[i] - bVar), max( abs(bVar - cVar), abs(cVar - A[i])));
-        if(diffCount < maxDiff) {
-
-            maxDiff = diffCount;
-            finalOutput = {A[i], {bVar, cVar}};
-
-        }
-    }
-    cout<<finalOutput.first<<" "<<finalOutput.second.first<<" "<<finalOutput.second.second;
-    return;
+    vector<vector<int>> A{{3, 13}, 
+                          {8, 10, 11}
+                          {9, 15}};
+    vector<int> output;
+    merge(A);    
 }
 
 int main()
