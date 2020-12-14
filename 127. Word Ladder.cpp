@@ -31,7 +31,7 @@ public:
     }
 };
 
-//Time Complexity O(N X M^2) , Where is the Number os words in Word List and M is the size of maximum Word
+//Time Complexity O(N X M^2) , Where is the Number os words in Word List and M is the size of maximum Word (m^2) because substr take m time as well.
 //Space O(N x M^2)
 
 
